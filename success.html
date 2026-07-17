@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Login</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #1f1f22;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .input-class {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .input-class input {
+        flex: 1;
+      }
+
+      .eye-btn {
+        background: none;
+        border: none;
+        width: auto;
+        padding: 0;
+        cursor: pointer;
+        color: #999;
+        display: flex;
+        align-items: center;
+      }
+
+      .eye-btn svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      #eyeOpen {
+        display: none;
+      }
+
+      .language {
+        color: #a8a8a8;
+        font-size: 15px;
+        margin-bottom: 70px;
+      }
+
+      .logo {
+        width: 75px;
+        margin-bottom: 50px;
+      }
+
+      form {
+        width: 100%;
+      }
+
+      input {
+        outline: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: #1f1f2233;
+        color: #f2f4f6;
+        font-size: 16px;
+      }
+
+      .input-class {
+        border: 1px solid #333;
+        padding: 16px;
+        margin-bottom: 12px;
+        border-radius: 14px;
+        background: #1f1f2233;
+        height: 60px;
+      }
+
+      .input-class:focus-within {
+        border: 1px solid#0064e0;
+        outline: none;
+      }
+      input::placeholder {
+        color: #999;
+      }
+
+      button {
+        width: 100%;
+        border: none;
+        border-radius: 30px;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      form button {
+        background: #0064e0;
+        color: #f2f4f6;
+        font-weight: bold;
+      }
+
+      .forgot {
+        color: white;
+        text-decoration: none;
+        margin-top: 25px;
+        margin-bottom: 120px;
+      }
+
+      .create {
+        background: transparent;
+        border: 1.5px solid #1877f2;
+        color: #4da3ff;
+      }
+
+      .meta {
+        margin-top: 30px;
+        color: #ddd;
+        font-size: 28px;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="language">Português (Brasil) ▼</div>
+
+      <img
+        src="logoinstagram.png"
+        alt="Instagram"
+        class="logo"
+        style="height: 55px; width: 55px"
+      />
+
+      <div><p>Your account is secured. You can now close this page.</p></div>
+
+      <div class="meta">
+        <img src="metalogo.png" alt="" style="height: 20px" />
+      </div>
+    </div>
+  </body>
+</html>

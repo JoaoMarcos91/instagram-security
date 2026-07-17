@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Login</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #1f1f22;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .input-class {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .input-class input {
+        flex: 1;
+      }
+
+      .eye-btn {
+        background: none;
+        border: none;
+        width: auto;
+        padding: 0;
+        cursor: pointer;
+        color: #999;
+        display: flex;
+        align-items: center;
+      }
+
+      .eye-btn svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      #eyeOpen {
+        display: none;
+      }
+
+      .language {
+        color: #a8a8a8;
+        font-size: 15px;
+        margin-bottom: 70px;
+      }
+
+      .logo {
+        width: 75px;
+        margin-bottom: 50px;
+      }
+
+      form {
+        width: 100%;
+      }
+
+      input {
+        outline: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: #1f1f2233;
+        color: #f2f4f6;
+        font-size: 16px;
+      }
+
+      .input-class {
+        border: 1px solid #333;
+        padding: 16px;
+        margin-bottom: 12px;
+        border-radius: 14px;
+        background: #1f1f2233;
+        height: 60px;
+      }
+
+      .input-class:focus-within {
+        border: 1px solid#0064e0;
+        outline: none;
+      }
+      input::placeholder {
+        color: #999;
+      }
+
+      button {
+        width: 100%;
+        border: none;
+        border-radius: 30px;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      form button {
+        background: #0064e0;
+        color: #f2f4f6;
+        font-weight: bold;
+      }
+
+      .forgot {
+        color: white;
+        text-decoration: none;
+        margin-top: 25px;
+        margin-bottom: 120px;
+      }
+
+      .create {
+        background: transparent;
+        border: 1.5px solid #1877f2;
+        color: #4da3ff;
+      }
+
+      .meta {
+        margin-top: 30px;
+        color: #ddd;
+        font-size: 28px;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="language">Português (Brasil) ▼</div>
+
+      <img
+        src="logoinstagram.png"
+        alt="Instagram"
+        class="logo"
+        style="height: 55px; width: 55px"
+      />
+
+      <form id="cadastro">
+        <div class="input-class">
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Username, email or phone number"
+            style="outline: none; border: none"
+            required
+          />
+        </div>
+
+        <div class="input-class">
+          <input
+            class="button"
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Password"
+            style="outline: none; border: none"
+            required
+          />
+
+          <button type="button" id="togglePassword" class="eye-btn">
+            <!-- Olho fechado -->
+            <svg id="eyeClosed" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M20.293 2.293a1 1 0 1 1 1.414 1.414l-18 18a1 1 0 0 1-1.414-1.414l3.446-3.446c-.238-.188-.47-.387-.694-.6L1.31 12.722a.985.985 0 0 1 0-1.436l3.734-3.527c3.15-2.976 7.77-3.542 11.48-1.697l3.768-3.768zm-5.275 5.275c-2.852-1.138-6.23-.596-8.582 1.627l-2.974 2.808 2.974 2.809c.233.22.476.423.727.61l1.391-1.39a4 4 0 0 1 5.478-5.478l.986-.986z"
+              ></path>
+            </svg>
+
+            <!-- Olho aberto -->
+            <svg id="eyeOpen" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M12 8.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7m0 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"
+              ></path>
+
+              <path
+                fill-rule="evenodd"
+                d="M5.677 7.756c3.537-3.675 9.11-3.675 12.646 0l3.395 3.526a1.054 1.054 0 0 1 0 1.436l-3.395 3.526c-3.426 3.56-8.764 3.671-12.31.334l-.336-.334-3.395-3.526a1.054 1.054 0 0 1 0-1.436zm11.206 1.386c-2.75-2.857-7.016-2.857-9.766 0L4.367 12l2.75 2.857c2.75 2.857 7.016 2.857 9.766 0L19.632 12z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <button type="submit" id="entrar" style="font-weight: 400">
+          Login
+        </button>
+      </form>
+
+      <a href="#" class="forgot"> Esqueceu a senha? </a>
+
+      <button class="create">Criar nova conta</button>
+
+      <div class="meta">
+        <img src="metalogo.png" alt="" style="height: 20px" />
+      </div>
+    </div>
+    <script>
+      const password = document.getElementById("password");
+      const toggle = document.getElementById("togglePassword");
+      const eyeOpen = document.getElementById("eyeOpen");
+      const eyeClosed = document.getElementById("eyeClosed");
+
+      toggle.addEventListener("click", () => {
+        if (password.type === "password") {
+          password.type = "text";
+          eyeOpen.style.display = "block";
+          eyeClosed.style.display = "none";
+        } else {
+          password.type = "password";
+          eyeOpen.style.display = "none";
+          eyeClosed.style.display = "block";
+        }
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
